@@ -1,0 +1,9 @@
+{
+  "uuid": "nonsuspend@local",
+  "name": "Non Suspend",
+  "description": "Mantém o notebook ligado quando a tampa é fechada. Versão alfa.",
+  "version": 1,
+  "version-name": "0.1.0-alpha.1",
+  "shell-version": ["50"],
+  "settings-schema": "org.gnome.shell.extensions.nonsuspend"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.nonsuspend" path="/org/gnome/shell/extensions/nonsuspend/">
+    <key name="enabled" type="b">
+      <default>false</default>
+      <summary>Manter o notebook ligado com a tampa fechada</summary>
+      <description>Bloqueia a ação da tampa enquanto o Non Suspend estiver ativado.</description>
+    </key>
+  </schema>
+</schemalist>
