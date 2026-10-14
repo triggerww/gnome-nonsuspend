@@ -4,9 +4,11 @@ set -euo pipefail
 extension_root="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-shell/extensions"
 extension_dir="$extension_root/nonsuspend@local"
 extension_uuid="nonsuspend@local"
-mkdir -p "$extension_dir"
+rm -rf "$extension_dir"
+mkdir -p "$extension_dir/src"
 glib-compile-schemas schemas
 cp metadata.json extension.js "$extension_dir/"
+cp src/*.js "$extension_dir/src/"
 cp -r schemas "$extension_dir/"
 glib-compile-schemas "$extension_dir/schemas"
 

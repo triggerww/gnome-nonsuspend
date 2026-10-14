@@ -5,6 +5,8 @@ check:
 	@command -v glib-compile-schemas >/dev/null || (echo "glib-compile-schemas é necessário"; exit 1)
 	@glib-compile-schemas schemas
 	@node --check extension.js
+	@node --check src/inhibitor.js
+	@node --check src/indicator.js
 	@echo "Verificações da extensão concluídas"
 
 install:

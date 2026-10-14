@@ -1,6 +1,6 @@
 # Non Suspend
 
-Extensão simples para o GNOME Shell que mantém o notebook ligado quando a tampa é fechada. Ela adiciona um botão ao menu de Quick Settings para ativar ou desativar esse comportamento.
+Extensão leve para o GNOME Shell que mantém o notebook ligado quando a tampa é fechada. Ela adiciona um botão ao menu de Quick Settings e um indicador visual na barra superior enquanto o bloqueio está ativo.
 
 ## Estado do projeto
 
@@ -41,7 +41,9 @@ O instalador copia a extensão para:
 ~/.local/share/gnome-shell/extensions/nonsuspend@local
 ```
 
-Depois da instalação, o botão **Non Suspend** aparecerá no menu de Quick Settings. Se a extensão não for ativada imediatamente, encerre e inicie novamente a sessão do GNOME.
+Cada instalação remove primeiro a cópia anterior, evitando arquivos antigos e indicadores duplicados durante atualizações.
+
+Depois da instalação, o botão **Non Suspend** estará no menu de Quick Settings. O indicador visual aparecerá na barra superior somente quando o bloqueio estiver ativo. Se a extensão não for ativada imediatamente, encerre e inicie novamente a sessão do GNOME.
 
 Também é possível instalar usando o `Makefile`:
 
@@ -52,8 +54,8 @@ make install
 ## Uso
 
 1. Abra o menu de Quick Settings do GNOME.
-2. Localize o botão **Non Suspend**.
-3. Ative-o antes de fechar a tampa.
+2. Ative **Non Suspend** antes de fechar a tampa.
+3. Observe o indicador na barra superior enquanto ele estiver ativo.
 4. Desative-o quando quiser restaurar o comportamento normal.
 
 O estado do toggle é salvo nas configurações da extensão, mas o bloqueio só permanece enquanto a extensão estiver ativa e o processo `systemd-inhibit` estiver funcionando.
@@ -83,7 +85,7 @@ make uninstall
 - O suporte declarado atualmente é somente para GNOME Shell 50.
 - O comportamento depende do `systemd-logind` e da configuração de energia da distribuição.
 - A extensão bloqueia o tratamento do evento de fechamento da tampa; ela não pretende substituir todas as configurações de suspensão do sistema.
-- Este projeto não é considerado estável. Faça seus próprios testes antes de usá-lo em uma máquina de trabalho.
+- Se o processo de bloqueio terminar inesperadamente, a extensão desativa o estado automaticamente.
 
 ## Licença
 
