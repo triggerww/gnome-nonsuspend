@@ -4,7 +4,7 @@
     <key name="enabled" type="b">
       <default>false</default>
       <summary>Manter o notebook ligado com a tampa fechada</summary>
-      <description>Bloqueia a ação da tampa enquanto o Non Suspend estiver ativado.</description>
+      <description>Bloqueia a suspensão, economiza energia e apaga a tela enquanto o Non Suspend estiver ativado e a tampa fechada.</description>
     </key>
   </schema>
 </schemalist>

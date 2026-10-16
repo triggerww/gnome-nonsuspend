@@ -7,6 +7,10 @@ check:
 	@node --check extension.js
 	@node --check src/inhibitor.js
 	@node --check src/indicator.js
+	@node --check src/lid-monitor.js
+	@node --check src/power-manager.js
+	@node --check src/idle-inhibitor.js
+	@node --check src/device-state.js
 	@echo "Verificações da extensão concluídas"
 
 install:

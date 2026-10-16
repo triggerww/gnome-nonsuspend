@@ -9,10 +9,10 @@ class NonSuspendIndicator extends QuickSettings.SystemIndicator {
         super._init();
         this._destroyed = false;
         this._panelIndicator = this._addIndicator();
-        this._panelIndicator.gicon = Gio.ThemedIcon.new('thunderbolt-symbolic');
+        this._panelIndicator.gicon = Gio.ThemedIcon.new('system-lock-screen-symbolic');
         this._toggle = new QuickSettings.QuickToggle({
-            title: 'Non Suspend',
-            iconName: 'thunderbolt-symbolic',
+            title: 'Suspensão',
+            iconName: 'system-lock-screen-symbolic',
             toggleMode: true,
         });
         this._toggle.connect('clicked', onClicked);
